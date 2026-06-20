@@ -2,6 +2,17 @@
 
 이 책은 한국인이 읽고 실행한다는 사실을 기본 전제로 삼습니다. 독자와 시장을 별도 지역 수식어로 반복하지 않습니다. 플랫폼·결제·정산·세금·가격·광고·구매 습관과 실행 경로는 처음부터 독자의 실제 환경에 맞춰 판단합니다.
 
+## 문서 우선순위
+
+다음 문서만 공식 운영 기준으로 사용합니다.
+
+1. `AGENTS.md`
+2. `rules/공통_편집규칙.md`
+3. `handoff/README.md`
+4. `templates/handoff_template.md`
+
+`handoff/business/README.md`, `handoff/research/README.md`, `handoff/draft/README.md`, `handoff/review/README.md`는 폐기된 안내문입니다. 에이전트는 이 파일들을 읽거나 인용하지 않습니다.
+
 작업 순서:
 
 `business → research → draft → review → final`
