@@ -1,0 +1,33 @@
+# Handoff workflow
+
+이 책은 한국인이 읽고 실행한다는 사실을 기본 전제로 삼습니다. 독자와 시장을 별도 지역 수식어로 반복하지 않습니다. 플랫폼·결제·정산·세금·가격·광고·구매 습관과 실행 경로는 처음부터 독자의 실제 환경에 맞춰 판단합니다.
+
+작업 순서:
+
+`business → research → draft → review → final`
+
+## Business
+
+`handoff/business/model-XX.md`
+
+실제 구매자, 유입 경로, 판매 방식, 결제, 정산, 비용, 확정 입금, 반복 가능성, 중단 기준을 분석합니다. 마지막에는 다음 단계가 공식자료로 검증할 조사 체크리스트를 둡니다.
+
+## Research
+
+`handoff/research/model-XX.md`
+
+먼저 business 파일을 읽습니다. 현장 자료로 시장동향과 운영 감각을 파악하고, 가격·자격·수수료·지급 조건·상업 이용은 공식 문서로 최종 검증합니다. 미국식 모델은 실제 환경에서 대응되는 경로가 확인될 때만 실행안으로 인정합니다.
+
+## Draft
+
+`handoff/draft/model-XX.md`
+
+business와 research 파일을 모두 읽습니다. 긴 자료를 평탄화하지 않고 `관찰 → 숨은 변수 → 작동 메커니즘 → 실행 판단 → 실패·전환 신호`로 재구성합니다.
+
+## Review
+
+`handoff/review/model-XX.md`
+
+business, research, draft를 함께 검토합니다. 실제 구매자와 수익 경로가 불명확하거나, 미국식 단가·전환율·구독 구조를 그대로 옮겼거나, 긴 자료를 일반론으로 줄였으면 치명적 오류로 분류합니다.
+
+모든 단계는 `rules/공통_편집규칙.md`와 `templates/handoff_template.md`를 따릅니다. 작업 완료 후 `status/model-status.csv`를 갱신합니다.
