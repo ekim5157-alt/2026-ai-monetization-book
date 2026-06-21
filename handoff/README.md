@@ -27,6 +27,8 @@
 
 먼저 business 파일을 읽습니다. 현장 자료로 시장동향과 운영 감각을 파악하고, 가격·자격·수수료·지급 조건·상업 이용은 공식 문서로 최종 검증합니다. 미국식 모델은 실제 환경에서 대응되는 경로가 확인될 때만 실행안으로 인정합니다.
 
+`handoff/research/model-XX.md` 파일은 draft, review, final 단계의 근거 문서입니다. 임시 산출물, probe 파일, cleanup 파일을 정리할 때 함께 삭제하지 않습니다. 내용이 낡았으면 삭제하지 말고 같은 경로에서 갱신합니다.
+
 ## Draft
 
 `handoff/draft/model-XX.md`
