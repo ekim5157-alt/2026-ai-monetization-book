@@ -15,6 +15,11 @@
 
 `business → research → draft → review → final`
 
+## 프로세스 보호 원칙
+
+- 사용자가 지시하지 않은 Git 연결·생성·저장·우회 방법을 연구하거나 실행하지 않습니다.
+- 프로세스상의 문제가 있을 경우, 프로세스 자체를 재정의하거나 하부 프로세스를 만들지 말고 사용자에게 현재 상태를 설명합니다.
+
 ## Business
 
 `handoff/business/model-XX.md`
