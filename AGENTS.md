@@ -24,14 +24,29 @@
 - SHA 충돌이 발생하면 최신 파일을 다시 읽고 사용자의 최근 지시를 기준으로 수정 내용을 다시 적용한다.
 - 기술적으로 실행할 수 없는 경우가 아니면 사용자에게 판단을 되돌리지 않는다.
 
+## 모델별 요구사항 우선 원칙
+
+- 작업 대상에 `requirements/model-XX.md`가 있으면 모든 단계가 반드시 먼저 읽는다.
+- `requirements/model-XX.md`는 기존 business·research·draft·review·final보다 우선하는 모델 정의다.
+- 기존 handoff가 요구사항과 충돌하거나 필수 사례를 빠뜨렸으면 기존 완료 상태를 신뢰하지 않고 같은 경로에서 다시 생성한다.
+- 공식 문서에서 바로 확인되지 않는 사용자 제공 운영 관찰은 삭제하지 않는다. `계약 확인 필요`, `사업자 인터뷰 필요`, `사용자 제공 운영 관찰`, `편집 판단` 중 하나로 분류한다.
+- requirements가 변경되면 해당 모델의 기존 분석·조사·초안·검증·최종 완료 표시는 무효다.
+- business와 research는 `python scripts/check_model_requirements.py <단계> <모델번호>` 검사를 통과해야 완료 처리할 수 있다.
+
 에이전트는 사용자의 명시 지시 없이 자동 동기화, 자동 pull, 자동 push, 자동 삭제 정리를 실행하지 않는다. GitHub와 로컬 작업물의 동기화는 사용자가 요청한 범위에서만 수행한다.
 
 `handoff/research/model-XX.md` 파일은 중간 원본이다. 임시 파일 정리, cleanup, probe 제거 작업에서 삭제하지 않는다.
 
 business 단계는 반드시 `prompts/01_사업성_분석.md`를 먼저 읽는다.
 
-`handoff/business/model-XX.md` 작성 후 다음 검사를 통과해야 한다.
+`handoff/business/model-XX.md` 작성 후 다음 검사를 모두 통과해야 한다.
 
 `python scripts/check_business_handoff.py handoff/business/model-XX.md`
 
-검사 실패 시 결과 저장, 상태 갱신, 커밋을 하지 않는다.
+`python scripts/check_model_requirements.py business XX`
+
+research 단계는 반드시 `prompts/02_공식자료_조사.md`, `requirements/model-XX.md`, `handoff/business/model-XX.md`를 읽고 다음 검사를 통과해야 한다.
+
+`python scripts/check_model_requirements.py research XX`
+
+검사 실패 시 결과 저장, 상태 갱신, 다음 단계 전달을 하지 않는다.
